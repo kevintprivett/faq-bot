@@ -8,13 +8,13 @@ const commands = {
   math_prereqs: {
     description: 'How to review the math prerequisites.',
     response:
-      '## How can I review the math prerequisites?\nSee our [Pre-College Math](https://ossu.dev/precollege-math) curriculum for a list of resources to use for reviewing the math prerequisites.',
+      '## How can I review the math prerequisites?\nSee our [Pre-College Math](<https://ossu.dev/precollege-math>) curriculum for a list of resources to use for reviewing the math prerequisites.',
     type: 1,
   },
   learn_language: {
     description: 'Finding a course for a specific language.',
     response:
-      '## What is a good course to learn a particular language?\nOSSU focuses on finding the best courses to learn computer science topics, and isn’t focused on finding language-specific courses. If you are looking to learn a particular language or framework there are two great resources to check.\n1. [Hackr.io](https://hackr.io/tutorials/) allows users to submit and upvote learning resources for topics such as Python or the Java Spring Framework.\n2. Most languages have a community on Reddit. When you find the community’s page, check to see if there is a wiki or sidebar with resources. For example, see [/r/python](https://old.reddit.com/r/Python). Note that the sidebar content can be different depending on whether you use www.reddit.com or old.reddit.com.',
+      '## What is a good course to learn a particular language?\nOSSU focuses on finding the best courses to learn computer science topics, and isn’t focused on finding language-specific courses. If you are looking to learn a particular language or framework there are two great resources to check.\n1. [Hackr.io](<https://hackr.io/tutorials/>) allows users to submit and upvote learning resources for topics such as Python or the Java Spring Framework.\n2. Most languages have a community on Reddit. When you find the community’s page, check to see if there is a wiki or sidebar with resources. For example, see [/r/python](<https://old.reddit.com/r/Python>). Note that the sidebar content can be different depending on whether you use www.reddit.com or old.reddit.com.',
     type: 1,
   },
   firebase_app: {
@@ -38,7 +38,7 @@ const commands = {
   coursera_free: {
     description: 'Whether Coursera courses are free to access.',
     response:
-      '## Are Coursera courses free to access?\nShort answer: No. Not anymore.\nIn [July of 2025, Coursera removed audit access](https://www.classcentral.com/report/coursera-preview-mode-paywall/) for the vast majority of their courses, including all of the Coursera courses that OSSU included in its curriculum at the time.\nUnless something changes at Coursera, OSSU will no longer be recommending their courses.  We are currently reviewing options for free resources that can replace the Coursera courses that are still in the curriculum.\nWe ask that you help overcome this challenge by finding replacements and engaging with RFC discussions in the [Issues tab](https://github.com/ossu/computer-science/issues) where we are discussing alternatives.\nWe may have more up-to-date recommendations in the [Discord channel](https://discord.gg/wuytwK5s9h) so please do check there as well.',
+      '## Are Coursera courses free to access?\nShort answer: No. Not anymore.\nIn [July of 2025, Coursera removed audit access](<https://www.classcentral.com/report/coursera-preview-mode-paywall/>) for the vast majority of their courses, including all of the Coursera courses that OSSU included in its curriculum at the time.\nUnless something changes at Coursera, OSSU will no longer be recommending their courses.  We are currently reviewing options for free resources that can replace the Coursera courses that are still in the curriculum.\nWe ask that you help overcome this challenge by finding replacements and engaging with RFC discussions in the [Issues tab](<https://github.com/ossu/computer-science/issues>) where we are discussing alternatives.\nWe may have more up-to-date recommendations in the [Discord channel](<https://discord.gg/wuytwK5s9h>) so please do check there as well.',
     type: 1,
   },
   edx_upgrade: {
@@ -56,13 +56,13 @@ const commands = {
   topic_coverage: {
     description: 'Why a topic is covered or ignored.',
     response:
-      "## Why doesn't the curriculum cover/ignore topic X?\nYou can read more about our curricular guidelines and the qualifications of the guidelines' authors [here](https://github.com/ossu/computer-science/blob/master/CURRICULAR_GUIDELINES.md). If you find a topic that is required by our guidelines and is not included in the curriculum, we should make a change! Read more about [contributing to a change.](https://github.com/ossu/computer-science/blob/master/CONTRIBUTING.md)",
+      "## Why doesn't the curriculum cover/ignore topic X?\nYou can read more about our curricular guidelines and the qualifications of the guidelines' authors [here](<https://github.com/ossu/computer-science/blob/master/CURRICULAR_GUIDELINES.md>). If you find a topic that is required by our guidelines and is not included in the curriculum, we should make a change! Read more about [contributing to a change.](<https://github.com/ossu/computer-science/blob/master/CONTRIBUTING.md>)",
     type: 1,
   },
   prerequisites: {
     description: 'Why some prerequisites are missing.',
     response:
-      "## Why is the curriculum missing some pre-requisites?\nThe curriculum assumes two things:\n- You are reasonably fluent in English.\n- You have gotten through a standard high school curriculum that included physics and pre-calculus.\nWithout these assumptions, the curriculum would be out of control with trying to fill in your knowledge gaps.\nFor those who want to study math pre-requisites, read more [here](https://github.com/ossu/computer-science/blob/master/FAQ.md#how-can-i-review-the-math-prerequisites)\nOf course, if you find that the curriculum is missing a pre-requisite for a course that isn't part of a normal high school curriculum, please let us know!",
+      "## Why is the curriculum missing some pre-requisites?\nThe curriculum assumes two things:\n- You are reasonably fluent in English.\n- You have gotten through a standard high school curriculum that included physics and pre-calculus.\nWithout these assumptions, the curriculum would be out of control with trying to fill in your knowledge gaps.\nFor those who want to study math pre-requisites, read more [here](<https://github.com/ossu/computer-science/blob/master/FAQ.md#how-can-i-review-the-math-prerequisites>)\nOf course, if you find that the curriculum is missing a pre-requisite for a course that isn't part of a normal high school curriculum, please let us know!",
     type: 1,
   },
   se_project: {
@@ -74,25 +74,25 @@ const commands = {
   find_course: {
     description: 'How to find a course on a subject.',
     response:
-      '## How can I find a course on a particular subject?\nAfter completing Core CS, learners are ready to pursue computer science topics of their own interest. How can one find a course on a given topic?\nFor MOOCs an excellent resource is [Class Central](https://www.classcentral.com/).\nFor materials from university courses that are online (but not organized) into a MOOC, [awesome-courses](https://github.com/prakhar1989/awesome-courses) and [cs-video-courses](https://github.com/Developer-Y/cs-video-courses) are good resources.\nFor textbooks, [Goodreads](https://www.goodreads.com/genres/computer-science) is a great platform for reader ratings and reviews.\nFor learning a particular programming language or framework, see this [question](https://github.com/ossu/computer-science/blob/master/FAQ.md#what-is-a-good-course-to-learn-a-particular-language).',
+      '## How can I find a course on a particular subject?\nAfter completing Core CS, learners are ready to pursue computer science topics of their own interest. How can one find a course on a given topic?\nFor MOOCs an excellent resource is [Class Central](<https://www.classcentral.com/>).\nFor materials from university courses that are online (but not organized) into a MOOC, [awesome-courses](<https://github.com/prakhar1989/awesome-courses>) and [cs-video-courses](<https://github.com/Developer-Y/cs-video-courses>) are good resources.\nFor textbooks, [Goodreads](<https://www.goodreads.com/genres/computer-science>) is a great platform for reader ratings and reviews.\nFor learning a particular programming language or framework, see this [question](<https://github.com/ossu/computer-science/blob/master/FAQ.md#what-is-a-good-course-to-learn-a-particular-language>).',
     type: 1,
   },
   coc: {
     description: 'Links to the Code of Conduct.',
     response:
-      '## OSSU Code of Conduct:\n<https://discord.com/channels/744385009028431943/798472021704966185/1440995888012071052>\n\n<https://github.com/ossu/code-of-conduct>',
+      '## OSSU Code of Conduct:\nBelow are links to the OSSU Discord Code of Conduct and the OSSU Github Code of Conduct (respectively)\n<https://discord.com/channels/744385009028431943/798472021704966185/1440995888012071052>\n<https://github.com/ossu/code-of-conduct>',
     type: 1,
   },
   rtg: {
     description: 'Read the Github.',
     response:
-      '## Read the Github:\nA lot of work has been done to collect all the information you need on the OSSU curriculum pages. Please read through the relevant README files and ask again if something is not clear.\n[OSSU CS](<https://cs.ossu.dev/>)\n<[OSSU Math](https://math.ossu.dev/)>\n[OSSU DS](https://ds.ossu.dev/)\n[OSSU Pre-College Math](https://ossu.dev/precollege-math/)',
+      '## Read the Github:\nA lot of work has been done to collect all the information you need on the OSSU curriculum pages. Please read through the relevant README files and ask again if something is not clear.\n[OSSU CS](<https://cs.ossu.dev/>)\n[OSSU Math](<https://math.ossu.dev/>)\n[OSSU DS](<https://ds.ossu.dev/>)\n[OSSU Pre-College Math](<https://ossu.dev/precollege-math/>)',
     type: 1,
   },
   spd_boring: {
     description: "Why you shouldn't skip SPD.",
     response:
-      '## This course is boring. Can I skip it?\nNo. This course may seem boring at first, but we suggest working though it. This is a great course, and it will probably change the way you think. Many students who found this course boring at first became a fan of the course by the time they completed it. Be very careful. The early parts (especially the rules about how evaluation works) plays a huge role in understanding how code works and gets executed for the rest of the course.\n\nYou can learn more about SPD on the course page [here](https://github.com/ossu/computer-science/tree/master/coursepages/spd)',
+      '## This course is boring. Can I skip it?\nNo. This course may seem boring at first, but we suggest working though it. This is a great course, and it will probably change the way you think. Many students who found this course boring at first became a fan of the course by the time they completed it. Be very careful. The early parts (especially the rules about how evaluation works) plays a huge role in understanding how code works and gets executed for the rest of the course.\n\nYou can learn more about SPD on the course page [here](<https://github.com/ossu/computer-science/tree/master/coursepages/spd>)',
     type: 1,
   },
 }
