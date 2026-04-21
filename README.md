@@ -18,11 +18,12 @@ CI/CD will handle the update process upon merge. Otherwise see below.
 
 ## Setup
 
-[.env.example] will detail all the necessary integration secrets.
+[.env.example] will detail all the necessary integration secrets. The guild id refers to the specific discord guild that is being targeted with npm run register.
 
 Ref: https://docs.discord.com/developers/quick-start/getting-started#step-1-creating-an-app
 Ref: https://developers.cloudflare.com/fundamentals/api/get-started/create-token/
 
+Rename this example env file to .env and run npm run secrets in order to push the .env file to cloudflare secrets.
 
 Once the cloudflare worker is deployed and functional, you'll also need to add the deployed endpoint in your discord developer portal.
 
@@ -38,6 +39,7 @@ npm run format -> prettier formatting
 
 npm run build -> transpile the application to be ready for upload.
 npm run register -> register the commands with discord for autocomplete
+npm run secrets -> push local .env file to cloudflare secrets
 npm run publish -> deploy the code to cloudflare workers
 
 ## Tech Stack

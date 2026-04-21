@@ -19,7 +19,6 @@ app.post('/', async (c) => {
   const { success } = await c.env.DEFAULT_RATE_LIMIT.limit({ key: 'default' })
 
   if (!success) {
-    console.info('Rate limit triggered')
     return c.text('Rate Limited', 429)
   }
 
@@ -33,7 +32,6 @@ app.post('/', async (c) => {
   }
 
   if (interaction.type === InteractionType.Ping) {
-    console.info('Pong')
     return c.json({
       type: InteractionResponseType.Pong,
     })
@@ -42,7 +40,6 @@ app.post('/', async (c) => {
   if (interaction.type === InteractionType.ApplicationCommand) {
     const command = interaction.data.name
     if (command in commands) {
-      console.info(command)
       const commandValue = commands[command as keyof typeof commands]
 
       return c.json({
@@ -62,7 +59,6 @@ app.post('/', async (c) => {
 })
 
 app.all('*', () => {
-  console.info('catch all 404')
   return new Response('Not Found.', { status: 404 })
 })
 
@@ -90,13 +86,11 @@ async function verifyDiscordRequest(
     (await verifyKey(body, signature, timestamp, DISCORD_PUBLIC_KEY))
 
   if (!isValidRequest) {
-    console.info('Post request was not valid')
     return { isValid: false }
   }
 
   const json = (await request.json()) as APIInteraction
 
-  console.info('Post request is valid')
   return { interaction: json, isValid: true }
 }
 
