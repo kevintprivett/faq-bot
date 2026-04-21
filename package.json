@@ -11,6 +11,9 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
+    "dev:wrangler": "wrangler dev",
+    "publish": "wrangler deploy",
+    "register": "tsx src/register.ts",
     "type-check": "tsc --noEmit",
     "format": "prettier . --write",
     "lint": "eslint .",
@@ -30,6 +33,7 @@
   },
   "dependencies": {
     "discord-interactions": "^4.4.0",
+    "dotenv": "^17.4.2",
     "hono": "^4.12.14"
   }
 }

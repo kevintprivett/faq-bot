@@ -5,13 +5,9 @@ import {
   InteractionType,
   type APIInteraction,
 } from 'discord-api-types/v10'
-import { HELLO_COMMAND } from './commands.js'
+import 'dotenv/config'
 
-/*
-TODO:
-This is a mashing together of a hono example and a discord example. Should do
-some testing before moving on.
-*/
+import commands from './commands.js'
 
 const app = new Hono()
 
@@ -21,35 +17,43 @@ app.post('/', async (c) => {
   const { isValid, interaction } = await verifyDiscordRequest(request)
 
   if (!isValid || !interaction) {
+    console.error('Bad request signature')
     return c.text('Bad request signature.', 401)
   }
 
   if (interaction.type === InteractionType.Ping) {
+    console.info('Pong')
     return c.json({
       type: InteractionResponseType.Pong,
     })
   }
 
   if (interaction.type === InteractionType.ApplicationCommand) {
-    switch (interaction.data.name.toLowerCase()) {
-      case HELLO_COMMAND.name.toLowerCase(): {
-        return c.json({
-          type: InteractionResponseType.ChannelMessageWithSource,
-          data: {
-            content: 'World!',
-          },
-        })
-      }
-      default:
-        return c.text('Unknown Type', 404)
+    const command = interaction.data.name
+    if (command in commands) {
+      console.info(command)
+      const commandValue = commands[command as keyof typeof commands]
+
+      return c.json({
+        type: InteractionResponseType.ChannelMessageWithSource,
+        data: {
+          content: commandValue.response,
+        },
+      })
+    } else {
+      console.error('Unknown Command')
+      return c.text('Unknown Command', 404)
     }
   }
 
-  console.error('Unknown Type')
-  return c.text('Unknown Type', 404)
+  console.error('Unknown Interaction Type')
+  return c.text('Unknown Interaction Type', 404)
 })
 
-app.all('*', () => new Response('Not Found.', { status: 404 }))
+app.all('*', () => {
+  console.info('catch all 404')
+  return new Response('Not Found.', { status: 404 })
+})
 
 async function verifyDiscordRequest(
   request: HonoRequest
@@ -75,11 +79,13 @@ async function verifyDiscordRequest(
     (await verifyKey(body, signature, timestamp, DISCORD_PUBLIC_KEY))
 
   if (!isValidRequest) {
+    console.info('Post request was not valid')
     return { isValid: false }
   }
 
   const json = (await request.json()) as APIInteraction
 
+  console.info('Post request is valid')
   return { interaction: json, isValid: true }
 }
 
