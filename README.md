@@ -1,6 +1,6 @@
 # FAQ-BOT
 
-This project is a simple discord bot that servers pre-determined answers to slash commands. Originally made to serve to serve Frequently Asked Questions on the [OSSU Discord](https://discord.com/channels/744385009028431943).  This project is meant to be deployed on CloudFlare Workers and should stay under the 10 ms free limit, though it should be straightforward to modify this code to run as a long-running instance.
+This project is a simple discord bot that servers pre-determined answers to slash commands. Originally made to serve to serve Frequently Asked Questions on the [OSSU Discord](https://discord.com/channels/744385009028431943). This project is meant to be deployed on CloudFlare Workers and should stay under the 10 ms free limit, though it should be straightforward to modify this code to run as a long-running instance.
 
 ## Updating Slash Commands
 

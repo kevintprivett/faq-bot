@@ -8,7 +8,7 @@ const commands = {
   math_prereqs: {
     description: 'How to review the math prerequisites.',
     response:
-      '## How can I review the math prerequisites?\n\nSee our [Pre-College Math](https://ossu.dev/precollege-math) curriculum for a list of resources to use for reviewing the math prerequisites.',
+      '## How can I review the math prerequisites?\nSee our [Pre-College Math](https://ossu.dev/precollege-math) curriculum for a list of resources to use for reviewing the math prerequisites.',
     type: 1,
   },
   learn_language: {
@@ -20,49 +20,49 @@ const commands = {
   firebase_app: {
     description: 'Why the Firebase OSSU app is broken or outdated.',
     response:
-      '## Why is the Firebase OSSU app different or broken?\n\nThe OSSU curriculum and ecosystem have been collaboratively built by many individuals. The Firebase app was one such contribution. When it was written, it was with the intention of helping future OSSU students.\n\nUnfortunately, the app has not been updated in many years. It does not reflect updates to the curriculum, it contains links to courses that no longer exist, and it has known bugs that prevent students from logging in.\n\nIt is our hope that the creators of the Firebase app can bring the app up to date. Until that time, the firebase app should be considered a deprecated product that is no longer supported.',
+      '## Why is the Firebase OSSU app different or broken?\nThe OSSU curriculum and ecosystem have been collaboratively built by many individuals. The Firebase app was one such contribution. When it was written, it was with the intention of helping future OSSU students.\nUnfortunately, the app has not been updated in many years. It does not reflect updates to the curriculum, it contains links to courses that no longer exist, and it has known bugs that prevent students from logging in.\nIt is our hope that the creators of the Firebase app can bring the app up to date. Until that time, the firebase app should be considered a deprecated product that is no longer supported.',
     type: 1,
   },
   course_order: {
     description: 'How to sequence the courses.',
     response:
-      '## In what order should I take the courses?\n\nYou have a few different options:\n- You can progress linearly from top to bottom of the page.\n- You can progress linearly through each individual section, but studying different sections in parallel.\n- You can design your own custom progression using the pre-requisites to guide you.\n\nWe have designed the curriculum to work for any of the above three styles.',
+      '## In what order should I take the courses?\nYou have a few different options:\n- You can progress linearly from top to bottom of the page.\n- You can progress linearly through each individual section, but studying different sections in parallel.\n- You can design your own custom progression using the pre-requisites to guide you.\nWe have designed the curriculum to work for any of the above three styles.',
     type: 1,
   },
   free_resources: {
     description: 'Whether every resource must be free.',
     response:
-      '## Does every resource in the main curriculum have to be free?\n\nYes, that is a core goal of OSSU.\n\nAt the same time, we recognize that education is a resource that requires payment to instructors to make it sustainable in the long term.\nTherefore, we respect the business model of websites like edX, which make their materials free but with some paid add-ons, like official certificates or extra interaction with course instructors.\n\nSo we only require that the learning materials of a resource be free to access, not that every possible add-on be free.\nIt would be ideal if graded assignments were always free. In the event that free assessments are not available OSSU looks for alternate assessments to pair with a course.',
+      '## Does every resource in the main curriculum have to be free?\nYes, that is a core goal of OSSU.\nAt the same time, we recognize that education is a resource that requires payment to instructors to make it sustainable in the long term.\nTherefore, we respect the business model of websites like edX, which make their materials free but with some paid add-ons, like official certificates or extra interaction with course instructors.\nSo we only require that the learning materials of a resource be free to access, not that every possible add-on be free.\nIt would be ideal if graded assignments were always free. In the event that free assessments are not available OSSU looks for alternate assessments to pair with a course.',
     type: 1,
   },
   coursera_free: {
     description: 'Whether Coursera courses are free to access.',
     response:
-      '## Are Coursera courses free to access?\n\nShort answer: No. Not anymore.\n\nIn  [July of 2025, Coursera removed audit access](https://www.classcentral.com/report/coursera-preview-mode-paywall/) for the vast majority of their courses, including all of the Coursera courses that OSSU included in its curriculum at the time.\n\nUnless something changes at Coursera, OSSU will no longer be recommending their courses.  We are currently reviewing options for free resources that can replace the Coursera courses that are still in the curriculum.\n\nWe ask that you help overcome this challenge by finding replacements and engaging with RFC discussions in the [Issues tab](https://github.com/ossu/computer-science/issues) where we are discussing alternatives.\n\nWe may have more up-to-date recommendations in the [Discord channel](https://discord.gg/wuytwK5s9h) so please do check there as well.',
+      '## Are Coursera courses free to access?\nShort answer: No. Not anymore.\nIn [July of 2025, Coursera removed audit access](https://www.classcentral.com/report/coursera-preview-mode-paywall/) for the vast majority of their courses, including all of the Coursera courses that OSSU included in its curriculum at the time.\nUnless something changes at Coursera, OSSU will no longer be recommending their courses.  We are currently reviewing options for free resources that can replace the Coursera courses that are still in the curriculum.\nWe ask that you help overcome this challenge by finding replacements and engaging with RFC discussions in the [Issues tab](https://github.com/ossu/computer-science/issues) where we are discussing alternatives.\nWe may have more up-to-date recommendations in the [Discord channel](https://discord.gg/wuytwK5s9h) so please do check there as well.',
     type: 1,
   },
   edx_upgrade: {
     description: 'Whether the edX Verified Upgrade is necessary.',
     response:
-      '## Is it necessary to purchase the Verified Upgrade for edX courses?\n\nIf you just want to watch the videos, it is never necessary for any edX course on our curriculum. Note that a number of edX courses only allow students to audit a course for the estimated number of weeks it takes to complete. Students should not begin a course until they are prepared to focus and complete the course.',
+      '## Is it necessary to purchase the Verified Upgrade for edX courses?\nIf you just want to watch the videos, it is never necessary for any edX course on our curriculum. Note that a number of edX courses only allow students to audit a course for the estimated number of weeks it takes to complete. Students should not begin a course until they are prepared to focus and complete the course.',
     type: 1,
   },
   alt_links: {
     description: 'What alternate course links are for.',
     response:
-      "## What are the alt links?\n\nSometimes a course is on multiple platforms that are reasonably similar in quality so we have an alt or two linked in case the main one isn't being offered at the time or you prefer the other one.Both are just as good, go with whichever you prefer or whichever is available when you want to take the course.",
+      "## What are the alt links?\nSometimes a course is on multiple platforms that are reasonably similar in quality so we have an alt or two linked in case the main one isn't being offered at the time or you prefer the other one.Both are just as good, go with whichever you prefer or whichever is available when you want to take the course.",
     type: 1,
   },
   topic_coverage: {
     description: 'Why a topic is covered or ignored.',
     response:
-      "## Why doesn't the curriculum cover//ignore topic X ?\n\nYou can read more about our curricular guidelines and the qualifications of the guidelines' authors [here](https://github.com/ossu/computer-science/blob/master/CURRICULAR_GUIDELINES.md). If you find a topic that is required by our guidelines and is not included in the curriculum, we should make a change! Read more about [contributing to a change.](https://github.com/ossu/computer-science/blob/master/CONTRIBUTING.md)",
+      "## Why doesn't the curriculum cover/ignore topic X?\nYou can read more about our curricular guidelines and the qualifications of the guidelines' authors [here](https://github.com/ossu/computer-science/blob/master/CURRICULAR_GUIDELINES.md). If you find a topic that is required by our guidelines and is not included in the curriculum, we should make a change! Read more about [contributing to a change.](https://github.com/ossu/computer-science/blob/master/CONTRIBUTING.md)",
     type: 1,
   },
   prerequisites: {
     description: 'Why some prerequisites are missing.',
     response:
-      "## Why is the curriculum missing some pre-requisites?\n\nThe curriculum assumes two things:\n- You are reasonably fluent in English.\n- You have gotten through a standard high school curriculum that included physics and pre-calculus.\n\nWithout these assumptions, the curriculum would be out of control with trying to fill in your knowledge gaps.\nFor those who want to study math pre-requisites, read more here\n\nOf course, if you find that the curriculum is missing a pre-requisite for a course that isn't part of a normal high school curriculum, please let us know!",
+      "## Why is the curriculum missing some pre-requisites?\nThe curriculum assumes two things:\n- You are reasonably fluent in English.\n- You have gotten through a standard high school curriculum that included physics and pre-calculus.\nWithout these assumptions, the curriculum would be out of control with trying to fill in your knowledge gaps.\nFor those who want to study math pre-requisites, read more [here](https://github.com/ossu/computer-science/blob/master/FAQ.md#how-can-i-review-the-math-prerequisites)\nOf course, if you find that the curriculum is missing a pre-requisite for a course that isn't part of a normal high school curriculum, please let us know!",
     type: 1,
   },
   se_project: {
@@ -74,19 +74,19 @@ const commands = {
   find_course: {
     description: 'How to find a course on a subject.',
     response:
-      '## How can I find a course on a particular subject?\nAfter completing Core CS, learners are ready to pursue computer science\ntopics of their own interest. How can one find a course on a given topic?\nFor MOOCs an excellent resource is Class Central.\nFor materials from university courses that are online (but not organized)\ninto a MOOC, awesome-courses and\ncs-video-courses\nare good resources. For textbooks, Goodreads\nis a great platform for reader ratings and reviews.\nFor learning a particular programming language or framework,\nsee this question.',
+      '## How can I find a course on a particular subject?\nAfter completing Core CS, learners are ready to pursue computer science topics of their own interest. How can one find a course on a given topic?\nFor MOOCs an excellent resource is [Class Central](https://www.classcentral.com/).\nFor materials from university courses that are online (but not organized) into a MOOC, [awesome-courses](https://github.com/prakhar1989/awesome-courses) and [cs-video-courses](https://github.com/Developer-Y/cs-video-courses) are good resources.\nFor textbooks, [Goodreads](https://www.goodreads.com/genres/computer-science) is a great platform for reader ratings and reviews.\nFor learning a particular programming language or framework, see this [question](https://github.com/ossu/computer-science/blob/master/FAQ.md#what-is-a-good-course-to-learn-a-particular-language).',
     type: 1,
   },
   coc: {
     description: 'Links to the Code of Conduct.',
     response:
-      '## OSSU Code of Conduct:\nhttps://discord.com/channels/744385009028431943/798472021704966185/1440995888012071052\nhttps://github.com/ossu/code-of-conduct',
+      '## OSSU Code of Conduct:\n<https://discord.com/channels/744385009028431943/798472021704966185/1440995888012071052>\n\n<https://github.com/ossu/code-of-conduct>',
     type: 1,
   },
   rtg: {
     description: 'Read the Github.',
     response:
-      '## Read the Github:\nA lot of work has been done to collect all the information you need on the OSSU curriculum pages. Please read through the relevant README files and ask again if something is not clear.\n[OSSU CS](https://cs.ossu.dev/)\n[OSSU Math](https://math.ossu.dev/)\n[OSSU DS](https://ds.ossu.dev/)\n[OSSU Pre-College Math](https://ossu.dev/precollege-math/)',
+      '## Read the Github:\nA lot of work has been done to collect all the information you need on the OSSU curriculum pages. Please read through the relevant README files and ask again if something is not clear.\n[OSSU CS](<https://cs.ossu.dev/>)\n<[OSSU Math](https://math.ossu.dev/)>\n[OSSU DS](https://ds.ossu.dev/)\n[OSSU Pre-College Math](https://ossu.dev/precollege-math/)',
     type: 1,
   },
   spd_boring: {
