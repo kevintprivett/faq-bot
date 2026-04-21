@@ -1,7 +1,5 @@
 ### TODO:
 
-- Rate limiting: Explore built in options for cf workers, otherwise do a simple in memory map to track rate limiting
-- chore: make .env.example
 - chore: make README with instructions for deployment
 - chore: make thin wrapper that can be deployed on a standalone server instead
 
