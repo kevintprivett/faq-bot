@@ -1,8 +1,6 @@
 ### TODO:
 
-- Create system to generate commands from a static json file, needs to update the register script and index script
 - Rate limiting: Explore built in options for cf workers, otherwise do a simple in memory map to track rate limiting
-- Create a system to generate the faq commands from OSSU
 - chore: make .env.example
 - chore: make README with instructions for deployment
 - chore: make thin wrapper that can be deployed on a standalone server instead

@@ -9,9 +9,20 @@ import 'dotenv/config'
 
 import commands from './commands.js'
 
-const app = new Hono()
+type Bindings = {
+  DEFAULT_RATE_LIMIT: RateLimit
+}
+
+const app = new Hono<{ Bindings: Bindings }>()
 
 app.post('/', async (c) => {
+  const { success } = await c.env.DEFAULT_RATE_LIMIT.limit({ key: 'default' })
+
+  if (!success) {
+    console.info('Rate limit triggered')
+    return c.text('Rate Limited', 429)
+  }
+
   const request = c.req
 
   const { isValid, interaction } = await verifyDiscordRequest(request)
