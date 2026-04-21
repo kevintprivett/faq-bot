@@ -2,10 +2,6 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   // Top-level configuration
   "name": "faq-bot",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "compatibility_date": "2026-04-20",
-  "vars": {
-    "DISCORD_APPLICATION_ID": "",
-    "DISCORD_PUBLIC_KEY": "",
-  },
 }
