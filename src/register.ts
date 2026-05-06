@@ -19,6 +19,9 @@ if (!applicationId) {
     'The DISCORD_APPLICATION_ID environment variable is required.'
   )
 }
+if (!guildId) {
+  throw new Error('The DISCORD_GUILD_ID environment variable is required.')
+}
 
 /**
  * Register all commands globally.  This can take o(minutes), so wait until

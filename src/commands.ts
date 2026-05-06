@@ -1,4 +1,10 @@
-const commands = {
+interface Command {
+  description: string
+  response: string
+  type: number
+}
+
+const commands: Record<string, Command> = {
   ossu_degree: {
     description: 'Whether OSSU offers a degree.',
     response:

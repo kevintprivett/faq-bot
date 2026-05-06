@@ -1,6 +1,6 @@
 # FAQ-BOT
 
-This project is a simple discord bot that servers pre-determined answers to slash commands. Originally made to serve to serve Frequently Asked Questions on the [OSSU Discord](https://discord.com/channels/744385009028431943). This project is meant to be deployed on CloudFlare Workers and should stay under the 10 ms free limit, though it should be straightforward to modify this code to run as a long-running instance.
+This project is a simple discord bot that serves pre-determined answers to slash commands. Originally made to serve Frequently Asked Questions on the [OSSU Discord](https://discord.com/channels/744385009028431943). This project is meant to be deployed on CloudFlare Workers and should stay under the 10 ms free limit, though it should be straightforward to modify this code to run as a long-running instance.
 
 ## Updating Slash Commands
 
@@ -37,8 +37,7 @@ Additionally, [wrangler.jsonc](wrangler.jsonc) has some configuration for rate l
 - npm run lint -> eslint
 - npm run lint:fix -> eslint --fix
 - npm run format -> prettier formatting
-
-- npm run build -> transpile the application to be ready for upload.
+- npm run build -> transpile the application to be ready for upload
 - npm run register -> register the commands with discord for autocomplete
 - npm run secrets -> push local .env file to cloudflare secrets
 - npm run publish -> deploy the code to cloudflare workers
