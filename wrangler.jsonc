@@ -10,10 +10,6 @@
       "invocation_logs": true,
     },
   },
-  "compatibility_flags": [
-    "nodejs_compat",
-    "nodejs_compat_populate_process_env",
-  ],
   "ratelimits": [
     {
       "name": "DEFAULT_RATE_LIMIT",

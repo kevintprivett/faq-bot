@@ -5,12 +5,12 @@ import {
   InteractionType,
   type APIInteraction,
 } from 'discord-api-types/v10'
-import 'dotenv/config'
 
 import commands from './commands.js'
 
 type Bindings = {
   DEFAULT_RATE_LIMIT: RateLimit
+  DISCORD_PUBLIC_KEY: string
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
@@ -24,7 +24,10 @@ app.post('/', async (c) => {
 
   const request = c.req
 
-  const { isValid, interaction } = await verifyDiscordRequest(request)
+  const { isValid, interaction } = await verifyDiscordRequest(
+    request,
+    c.env.DISCORD_PUBLIC_KEY
+  )
 
   if (!isValid || !interaction) {
     console.error('Bad request signature')
@@ -40,7 +43,12 @@ app.post('/', async (c) => {
   if (interaction.type === InteractionType.ApplicationCommand) {
     const command = interaction.data.name
     if (command in commands) {
-      const commandValue = commands[command as keyof typeof commands]
+      const commandValue = commands[command]
+
+      if (!commandValue) {
+        console.error('Unknown Command')
+        return c.text('Unknown Command', 404)
+      }
 
       return c.json({
         type: InteractionResponseType.ChannelMessageWithSource,
@@ -63,16 +71,11 @@ app.all('*', () => {
 })
 
 async function verifyDiscordRequest(
-  request: HonoRequest
+  request: HonoRequest,
+  discordKey: string
 ): Promise<{ isValid: boolean; interaction?: APIInteraction }> {
   if (request.method !== 'POST') {
     return { isValid: false }
-  }
-
-  const DISCORD_PUBLIC_KEY = process.env['DISCORD_PUBLIC_KEY']
-
-  if (!DISCORD_PUBLIC_KEY) {
-    throw new Error('The DISCORD_PUBLIC_KEY environment variable is required.')
   }
 
   // Using the incoming headers, verify this request actually came from discord.
@@ -83,13 +86,13 @@ async function verifyDiscordRequest(
   const isValidRequest =
     signature &&
     timestamp &&
-    (await verifyKey(body, signature, timestamp, DISCORD_PUBLIC_KEY))
+    (await verifyKey(body, signature, timestamp, discordKey))
 
   if (!isValidRequest) {
     return { isValid: false }
   }
 
-  const json = (await request.json()) as APIInteraction
+  const json = JSON.parse(new TextDecoder().decode(body)) as APIInteraction
 
   return { interaction: json, isValid: true }
 }
